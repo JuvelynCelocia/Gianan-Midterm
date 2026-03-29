@@ -30,3 +30,24 @@ class ProductController extends Controller
             $this->service->getOne($id)
         );
     }
+
+    public function store(Request $request)
+    {
+        return response()->json(
+            $this->service->update($id $request->all())
+        );
+    }
+    pulic function update(Request $request, $id)
+    {
+        return response()->json(
+            $this->service->update($id, $request->all())
+        );
+    }
+    public functin destroy($id)
+    {
+        return response()->json(
+            $this->service-delete($id)
+        );
+    }
+    }
+}
